@@ -74,3 +74,4 @@ jobs:
           env: |
             SAUCE_USERNAME=$SAUCE_USERNAME
             SAUCE_ACCESS_KEY=$SAUCE_ACCESS_KEY
+            REGION=us
