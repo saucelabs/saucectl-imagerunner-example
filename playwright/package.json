@@ -4,7 +4,7 @@
   "description": "Example running saucectl with playwright.",
   "scripts": {
     "test.local": "npx playwright test",
-    "test.docker": "docker run --rm -ti -e SAUCE_USERNAME=\"${SAUCE_USERNAME}\" -e SAUCE_ACCESS_KEY=\"${SAUCE_ACCESS_KEY}\" --platform linux/amd64  fpsl/playwright-hto-runner:latest",
+    "test.docker": "docker run --rm -e SAUCE_USERNAME=\"${SAUCE_USERNAME}\" -e SAUCE_ACCESS_KEY=\"${SAUCE_ACCESS_KEY}\" --platform linux/amd64  fpsl/playwright-hto-runner:latest",
     "test.sauce.us": "saucectl run --region us-west-1",
     "test.sauce.eu": "saucectl run --region eu-central-1"
   },
