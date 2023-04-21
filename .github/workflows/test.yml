@@ -31,6 +31,10 @@ jobs:
         run: npm install
         working-directory: ./playwright/
 
+      - name: Setup Playwright
+        run: npx playwright install
+        working-directory: ./playwright/
+
       - name: "Run locally"
         run: npm run test.local
         working-directory: ./playwright/
