@@ -6,6 +6,7 @@ defaults:
 
 suites:
   - name: "Playwright in ImageRunner"
+    ## FIXME: Use saucelabs registry
     image: fpsl/dummy-runner:playwright-1.32.0
     timeout: 10m
     artifacts:
