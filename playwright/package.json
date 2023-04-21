@@ -2,13 +2,9 @@
   "name": "imagerunner-playwright-example",
   "version": "1.0.0",
   "description": "Example running saucectl with playwright.",
-  "config" : {
-    "image_name": "fpsl/dummy-runner:playwright-${npm_package_version}"
-  },
   "scripts": {
-    "build": "docker build --platform linux/amd64 -t ${npm_package_config_image_name} .",
     "test.local": "npx playwright test",
-    "test.docker": "docker run --rm -ti -e SAUCE_USERNAME=\"${SAUCE_USERNAME}\" -e SAUCE_ACCESS_KEY=\"${SAUCE_ACCESS_KEY}\" --platform linux/amd64  ${npm_package_config_image_name}",
+    "test.docker": "docker run --rm -ti -e SAUCE_USERNAME=\"${SAUCE_USERNAME}\" -e SAUCE_ACCESS_KEY=\"${SAUCE_ACCESS_KEY}\" --platform linux/amd64  fpsl/playwright-hto-runner:latest",
     "test.sauce.us": "saucectl run --region us-west-1",
     "test.sauce.eu": "saucectl run --region eu-central-1"
   },
