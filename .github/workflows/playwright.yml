@@ -69,7 +69,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup saucectl
+      - name: Run saucectl
         uses: saucelabs/saucectl-run-action@v3
         env:
           GITHUB_TOKEN: ${{ github.token }}
