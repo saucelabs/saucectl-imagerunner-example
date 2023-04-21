@@ -1,2 +1,2 @@
-playwright/artifacts/
-playwright/node_modules/
+**/artifacts/
+**/node_modules/
