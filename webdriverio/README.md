@@ -30,7 +30,7 @@ saucectl configure
 ```shell
 saucectl run
 ``` 
-![running example](../assets/playwright-example.gif)
+![running example](../assets/webdriver-example.gif)
 
 Running saucectl in US and EU
 

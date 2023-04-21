@@ -1,6 +1,6 @@
 FROM node:18
 
-RUN mkdir /app/
+RUN mkdir /app
 WORKDIR /app
 
 ADD package.json /app/
@@ -10,5 +10,7 @@ RUN npm ci
 
 ADD test /app/test/
 ADD tsconfig.json /app/tsconfig.json
+
+RUN mkdir -p /app/artifacts/screenshots
 
 ENTRYPOINT ["npm", "run", "test.saucelabs"]

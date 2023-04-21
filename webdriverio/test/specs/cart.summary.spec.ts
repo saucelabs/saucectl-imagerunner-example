@@ -1,3 +1,4 @@
+import { mkdir, mkdirSync } from 'fs';
 import AppHeaderPage from '../page-objects/AppHeaderPage';
 import SwagOverviewPage from '../page-objects/SwagOverviewPage';
 import CartSummaryPage from '../page-objects/CartSummaryPage';
@@ -18,6 +19,9 @@ describe('Cart Summary page', () => {
         await CartSummaryPage.continueShopping();
 
         await expect(await SwagOverviewPage.waitForIsShown()).toBeTruthy();
+
+        mkdirSync('./artifacts/screenshots');
+        await browser.saveScreenshot('./artifacts/screenshots/example-screenshot.png');
     });
 
     it('should validate that we can go from the cart to the checkout page', async () => {
