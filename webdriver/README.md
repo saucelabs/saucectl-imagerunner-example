@@ -1,6 +1,6 @@
 # saucectl imagerunner example
 
-Example running Playwright on ImageRunner with `saucectl`.
+Example running WebdriverIO on ImageRunner with `saucectl`.
 
 ## What You'll Need
 
@@ -35,11 +35,11 @@ saucectl run
 Running saucectl in US and EU
 
 ```bash
-npm run test.sauce.us
+npm run test.saucelabs.us
 ```
 
 ```bash
-npm run test.sauce.eu
+npm run test.saucelabs.eu
 ```
 
 ## The Config

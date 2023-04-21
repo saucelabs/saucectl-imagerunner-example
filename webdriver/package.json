@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test.saucelabs": "wdio test/configs/wdio.saucelabs.conf.ts"
+    "test.saucelabs": "wdio test/configs/wdio.saucelabs.conf.ts",
+    "test.saucelabs.us": "REGION=us saucectl run --region us-west-1",
+    "test.saucelabs.eu": "REGION=eu saucectl run --region eu-central-1"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
     "@wdio/sauce-service": "^7.26.0",
     "@wdio/shared-store-service": "^7.26.0",
     "@wdio/spec-reporter": "^7.26.0",
+    "@wdio/types": "^8.8.6",
     "chromedriver": "^107.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4",
