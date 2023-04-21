@@ -3,9 +3,8 @@ apiVersion: v1alpha
 
 suites:
   - name: "WebdriverIO in ImageRunner"
-    workload: other
-    ## FIXME: Use saucelabs registry
-    image: fpsl/wdio-hto-runner:latest
+    workload: webdriver
+    image: saucelabs/imagerunner-webdriverio-example:latest
     timeout: 10m
     artifacts:
       - "/app/artifacts/screenshots"

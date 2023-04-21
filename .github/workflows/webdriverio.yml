@@ -56,7 +56,7 @@ jobs:
           context: webdriverio
           push: true
           load: false
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/wdio-hto-runner:latest
+          tags: saucelabs/imagerunner-webdriverio-example:latest
 
   run-wdio-sauce:
     runs-on: windows-latest

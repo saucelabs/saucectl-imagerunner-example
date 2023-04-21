@@ -4,8 +4,7 @@ apiVersion: v1alpha
 suites:
   - name: "Playwright in ImageRunner"
     workload: other
-    ## FIXME: Use saucelabs registry
-    image: fpsl/playwright-hto-runner:latest
+    image: saucelabs/imagerunner-playwright-example:latest
     timeout: 10m
     artifacts:
       - "/app/artifacts/test-results"

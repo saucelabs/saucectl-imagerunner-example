@@ -60,7 +60,7 @@ jobs:
           context: playwright
           push: true
           load: false
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/playwright-hto-runner:latest
+          tags: saucelabs/imagerunner-playwright-example:latest
 
   run-playwright-sauce:
     runs-on: windows-latest
