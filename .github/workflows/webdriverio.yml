@@ -53,7 +53,7 @@ jobs:
       - name: Build docker image
         uses: docker/build-push-action@v3
         with:
-          context: webdriver
+          context: webdriverio
           push: true
           load: false
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/wdio-hto-runner:latest
