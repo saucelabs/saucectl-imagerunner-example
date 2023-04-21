@@ -20,7 +20,7 @@ describe('Cart Summary page', () => {
 
         await expect(await SwagOverviewPage.waitForIsShown()).toBeTruthy();
 
-        mkdirSync('./artifacts/screenshots');
+        mkdirSync('./artifacts/screenshots', { recursive: true });
         await browser.saveScreenshot('./artifacts/screenshots/example-screenshot.png');
     });
 
