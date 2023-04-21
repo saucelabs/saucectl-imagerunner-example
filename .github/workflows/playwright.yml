@@ -1,4 +1,4 @@
-name: saucectl imagerunner example
+name: Plawyright ImageRunner Example
 
 on:
   pull_request:
@@ -39,7 +39,6 @@ jobs:
         run: npm run test.local
         working-directory: ./playwright/
 
-  ## FIXME: Build + Publish image upfront
   build-playwright:
     runs-on: ubuntu-latest
     steps:
@@ -63,19 +62,9 @@ jobs:
           load: false
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/playwright-hto-runner:latest
 
-  run-playwright-docker:
-    runs-on: ubuntu-latest
-    needs: [run-playwright-local, build-playwright]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: "Run docker image"
-        run: npm run test.docker
-        working-directory: ./playwright/
-
   run-playwright-sauce:
     runs-on: windows-latest
+    needs: [build-playwright]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
