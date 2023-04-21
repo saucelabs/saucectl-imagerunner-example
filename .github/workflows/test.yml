@@ -59,8 +59,8 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: playwright
-          push: false
-          load: true
+          push: true
+          load: false
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/playwright-hto-runner:latest
 
   run-playwright-docker:
