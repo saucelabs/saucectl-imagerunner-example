@@ -29,11 +29,11 @@ jobs:
 
       - name: Setup npm packages
         run: npm install
-        working-directory: ./webdriver/
+        working-directory: ./webdriverio/
 
       - name: "Run locally"
         run: npm run test.saucelabs
-        working-directory: ./webdriver/
+        working-directory: ./webdriverio/
 
   build-wdio:
     runs-on: ubuntu-latest
@@ -70,8 +70,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          working-directory: "./webdriver/"
+          working-directory: "./webdriverio/"
           env: |
             SAUCE_USERNAME=$SAUCE_USERNAME
             SAUCE_ACCESS_KEY=$SAUCE_ACCESS_KEY
-            REGION=us
