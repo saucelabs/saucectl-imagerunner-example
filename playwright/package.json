@@ -23,8 +23,5 @@
     "@playwright/test": "1.32.1",
     "@saucelabs/playwright-reporter": "^0.4.1",
     "playwright": "1.32.1"
-  },
-  "devDependencies": {
-    "saucectl": "^0.136.0"
   }
 }
