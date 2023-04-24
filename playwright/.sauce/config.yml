@@ -1,0 +1,21 @@
+kind: imagerunner
+apiVersion: v1alpha
+
+suites:
+  - name: "Playwright in ImageRunner"
+    workload: other
+    image: saucelabs/imagerunner-playwright-example:latest
+    timeout: 10m
+    artifacts:
+      - "/app/artifacts/test-results"
+    env:
+      SAUCE_USERNAME: $SAUCE_USERNAME
+      SAUCE_ACCESS_KEY: $SAUCE_ACCESS_KEY
+
+artifacts:
+  cleanup: false
+  download:
+    when: always
+    match:
+      - '*'
+    directory: ./artifacts

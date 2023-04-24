@@ -1,0 +1,76 @@
+name: WebdriverIO ImageRunner Example
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+env:
+  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+  NODE_VERSION: 18
+
+jobs:
+  run-wdio-local:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Setup npm packages
+        run: npm install
+        working-directory: ./webdriverio/
+
+      - name: "Run locally"
+        run: npm run test.local
+        working-directory: ./webdriverio/
+
+  build-wdio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: webdriverio
+          push: true
+          load: false
+          tags: saucelabs/imagerunner-webdriverio-example:latest
+
+  run-wdio-sauce:
+    runs-on: windows-latest
+    needs: [build-wdio]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run saucectl
+        uses: saucelabs/saucectl-run-action@v3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          working-directory: "./webdriverio/"
+          env: |
+            SAUCE_USERNAME=$SAUCE_USERNAME
+            SAUCE_ACCESS_KEY=$SAUCE_ACCESS_KEY

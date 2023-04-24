@@ -1,0 +1,21 @@
+kind: imagerunner
+apiVersion: v1alpha
+
+suites:
+  - name: "WebdriverIO in ImageRunner"
+    workload: webdriver
+    image: saucelabs/imagerunner-webdriverio-example:latest
+    timeout: 10m
+    artifacts:
+      - "/app/artifacts/screenshots"
+    env:
+      SAUCE_USERNAME: $SAUCE_USERNAME
+      SAUCE_ACCESS_KEY: $SAUCE_ACCESS_KEY
+
+artifacts:
+  cleanup: false
+  download:
+    when: always
+    match:
+      - '*'
+    directory: ./artifacts
