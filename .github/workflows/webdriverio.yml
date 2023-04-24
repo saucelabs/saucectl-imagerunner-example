@@ -32,7 +32,7 @@ jobs:
         working-directory: ./webdriverio/
 
       - name: "Run locally"
-        run: npm run test.saucelabs
+        run: npm run test.local
         working-directory: ./webdriverio/
 
   build-wdio:

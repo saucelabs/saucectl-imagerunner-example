@@ -12,4 +12,4 @@ ADD tsconfig.json /app/tsconfig.json
 
 RUN mkdir -p /app/artifacts/screenshots
 
-ENTRYPOINT ["npm", "run", "test.saucelabs"]
+ENTRYPOINT ["npm", "run", "test.sauce"]
