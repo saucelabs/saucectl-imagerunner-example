@@ -53,3 +53,5 @@ Our IDE Integrations (e.g. [Visual Studio Code](https://docs.saucelabs.com/dev/c
 If you want to modify the way the docker image is built, the [Dockerfile is here](Dockerfile).
 
 After modifying the image, you will have to publish it to your own registry, and modify [.sauce/config.yml](.sauce/config.yml) accordingly, to use your own image.
+
+The image to be used is defined with the `image:` field, under `suites:`. ([here](.sauce/config.yml#L7))
