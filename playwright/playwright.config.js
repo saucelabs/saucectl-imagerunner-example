@@ -1,6 +1,6 @@
-import { defineConfig } from '@playwright/test';
+const { defineConfig } = require('@playwright/test');
 
-export default defineConfig({
+module.exports = defineConfig({
   outputDir: 'artifacts/test-results',
   use: {
     video: 'on',
