@@ -9,7 +9,7 @@ our [documentation](https://docs.saucelabs.com/dev/cli/saucectl/#installing-sauc
 
 *If you're using VS Code, you can use [Runme](https://marketplace.visualstudio.com/items?itemName=stateful.runme) to run the following commands directly from VS Code.*
 
-### PreRequisites
+### Prerequisites
 
 If you want to be able to modify and rebuild the docker image, you need to have [Docker](https://docs.docker.com/engine/install/) installed.
 
