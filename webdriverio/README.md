@@ -48,7 +48,7 @@ saucectl run --region eu-central-1
 
 Our IDE Integrations (e.g. [Visual Studio Code](https://docs.saucelabs.com/dev/cli/saucectl/usage/ide/vscode)) can help you out by validating the YAML files and provide handy suggestions, so make sure to check them out!
 
-## Customisation
+## Customization
 
 If you want to modify the way the docker image is built, the [Dockerfile is here](Dockerfile).
 
