@@ -285,9 +285,11 @@ test.describe('Clear completed button', () => {
 
 test.describe('Persistence', () => {
   test('should persist its data', async ({ page }) => {
+    const newTodo = page.getByPlaceholder('What needs to be done?');
+
     for (const item of TODO_ITEMS.slice(0, 2)) {
-      await page.locator('.new-todo').fill(item);
-      await page.locator('.new-todo').press('Enter');
+      await newTodo.fill(item);
+      await newTodo.press('Enter');
     }
 
     const todoItems = page.locator('.todo-list li');
@@ -296,7 +298,7 @@ test.describe('Persistence', () => {
     await expect(todoItems).toHaveClass(['completed', '']);
 
     // Ensure there is 1 completed item.
-    checkNumberOfCompletedTodosInLocalStorage(page, 1);
+    await checkNumberOfCompletedTodosInLocalStorage(page, 1);
 
     // Now reload.
     await page.reload();
