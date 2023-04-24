@@ -35,11 +35,11 @@ saucectl run
 Running saucectl in US and EU
 
 ```bash
-npm run test.saucelabs.us
+saucectl run --region us-west-1
 ```
 
 ```bash
-npm run test.saucelabs.eu
+saucectl run --region eu-central-1
 ```
 
 ## The Config
