@@ -54,4 +54,4 @@ If you want to modify the way the docker image is built, the [Dockerfile is here
 
 After modifying the image, you will have to publish it to your own registry, and modify [.sauce/config.yml](.sauce/config.yml) accordingly, to use your own image.
 
-The image to be used is defined with the ([`image:` field](.sauce/config.yml#L7)), under the `suites` category.
+The image to be used is defined with the [`image:` field](.sauce/config.yml#L7), under the `suites` category.
