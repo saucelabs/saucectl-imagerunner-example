@@ -13,7 +13,7 @@ concurrency:
 env:
   SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
   SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
-  NODE_VERSION: 18
+  NODE_VERSION: 20
 
 jobs:
   run-playwright-local:
