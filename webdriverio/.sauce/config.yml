@@ -2,6 +2,7 @@ kind: imagerunner
 apiVersion: v1alpha
 sauce:
   region: us-west-1
+
 suites:
   - name: "WebdriverIO in ImageRunner"
     workload: webdriver
