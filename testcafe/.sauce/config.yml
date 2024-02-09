@@ -5,15 +5,7 @@ sauce:
 suites:
   - name: TestCafe in Image Runner 
     workload: other
-    image: testcafe/testcafe:latest 
-    entrypoint: "/opt/testcafe/docker/testcafe-docker.sh"
-    files:
-      - src: "" # Copy the tests
-        dst: ""
-      - src: "" # Copy the bootstrap script
-        dst: ""
-    # artifacts:
-    #   - "/workdir/best-practice/target/surefire-reports/*"
+    image: saucelabs/imagerunner-testcafe-example:latest
 
 # artifacts:
 #   download:
