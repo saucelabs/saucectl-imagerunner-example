@@ -1,4 +1,5 @@
 module.exports = {
   browsers: ['chromium', 'firefox'],
-  src: ['tests/**/*.test.js'],
+  src: ['/app/tests/**/*.test.js'],
+  reporter: ['saucelabs'],
 };
