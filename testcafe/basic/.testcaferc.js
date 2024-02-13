@@ -5,7 +5,7 @@ module.exports = {
     { name: 'saucelabs' },
     { 
       name: 'xunit',
-      output: '/app/test-results/report.xml',
+      output: '/test-results/report.xml',
     },
   ],
 };
