@@ -31,7 +31,7 @@ The `saucectl run` command will execute the suites defined in the config file sp
 
 ### In-depth
 
-The [config file](./.sauce/config.yml) defines the docker image to run, in this case it is an image already published to DockerHub called `saucelabs/imagerunner-testcafe-basic-example:latest`. That image is defined by the Dockerfile [here](./Dockerfile) and contains our [test code](./tests), our [testcafe config](./.testcaferc.js), the latest version of testcafe, and the browsers we will test against (chromium and firefox).
+The [config file](./.sauce/config.yml) defines the docker image to run, in this case it is an image already published to DockerHub called `saucelabs/imagerunner-testcafe-basic-example:latest`. That image is defined by the Dockerfile [here](./Dockerfile) and contains our [test code](./tests), our [testcafe config](./.testcaferc.js), the latest version of testcafe, and the browsers we can test against (chromium and firefox).
 
 When the `saucectl run` command is executed, the docker image defined in the saucectl config will be run in the Sauce Labs cloud which will execute the tests and report the results to Sauce Labs using the [Sauce Labs TestCafe Reporter](https://www.github.com/saucelabs/testcafe-reporter).
 
