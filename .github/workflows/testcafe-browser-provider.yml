@@ -1,0 +1,58 @@
+name: TestCafe Sauce Labs Browser Provider Example
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+env:
+  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+
+jobs:
+  build-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: testcafe/browser-provider
+          push: true
+          load: false
+          tags: saucelabs/imagerunner-testcafe-browser-provider-example:latest
+          platforms: linux/amd64,linux/arm64
+
+  run-testcafe-sauce:
+    runs-on: windows-latest
+    needs:
+      - build-docker-image
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run
+        uses: saucelabs/saucectl-run-action@v4
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          working-directory: "./testcafe/browser-provider/"
+          region: us-west-1
+          env: |
+            SAUCE_USERNAME=$SAUCE_USERNAME
+            SAUCE_ACCESS_KEY=$SAUCE_ACCESS_KEY

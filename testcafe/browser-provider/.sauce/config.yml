@@ -1,0 +1,12 @@
+apiVersion: v1alpha
+kind: imagerunner
+sauce:
+  region: us-west-1
+suites:
+  - name: TestCafe with Sauce Labs Browser Provider in Image Runner 
+    workload: other
+    image: saucelabs/imagerunner-testcafe-browser-provider-example:latest
+    entrypoint: npx testcafe "saucelabs:chrome@121:Windows 11" "/app/tests/**/*.test.js"
+    env:
+      SAUCE_USERNAME: $SAUCE_USERNAME
+      SAUCE_ACCESS_KEY: $SAUCE_ACCESS_KEY

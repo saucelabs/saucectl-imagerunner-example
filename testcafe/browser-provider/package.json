@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "dependencies": {
+    "testcafe": "3.5.0",
+    "testcafe-browser-provider-saucelabs": "3.0.0"
+  }
+}
