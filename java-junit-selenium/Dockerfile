@@ -1,4 +1,4 @@
-FROM maven:3-jdk-11-slim
+FROM maven:3.9.6-sapmachine-11
 
 ENV LANG=en_US.UTF-8
 
