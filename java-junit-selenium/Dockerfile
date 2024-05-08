@@ -4,6 +4,6 @@ ENV LANG=en_US.UTF-8
 
 WORKDIR /usr/build
 COPY    pom.xml       .
-COPY    best-practice .
+COPY    best-practice ./best-practice
 
 RUN mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
