@@ -31,11 +31,6 @@ public class RealDeviceWebTests extends MobileTestsBase {
     public static Collection<Object[]> iosConfigurations() {
         return Arrays.asList(new Object[][]{
                 {"iPhone.*"},
-                // {"iPhone 12.*"},
-                // {"iPad 10.*"},
-                // {"iPad Air.*"},
-                // {"iPad.*"},
-                // Duplication below for demo purposes of massive parallelization
         });
     }
 

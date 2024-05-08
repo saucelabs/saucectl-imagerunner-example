@@ -42,18 +42,6 @@ public class EmuSimWebAppTests extends MobileTestsBase {
         return Arrays.asList(new Object[][]{
                 {"Safari", "iOS", "15.4", "iPhone Simulator"},
                 {"Safari", "iOS", "previous_major", "iPhone Fast Simulator"},
-                // {"Safari", "iOS", "14.3", "iPhone XS Simulator"},
-                // {"Safari", "iOS", "14.3", "iPhone SE (2nd generation) Simulator"}
-                // Duplication below for demo purposes of massive parallelization
-//                {"Safari", "iOS", "14.3", "iPhone XS Max Simulator"},
-//                {"Safari", "iOS", "14.3", "iPhone XS Simulator"},
-//                {"Safari", "iOS", "14.3", "iPhone SE (2nd generation) Simulator"},
-//                {"Safari", "iOS", "14.3", "iPhone XS Max Simulator"},
-//                {"Safari", "iOS", "14.3", "iPhone XS Simulator"},
-//                {"Safari", "iOS", "14.3", "iPhone SE (2nd generation) Simulator"},
-//                {"Safari", "iOS", "14.3", "iPhone XS Max Simulator"},
-//                {"Safari", "iOS", "14.3", "iPhone XS Simulator"},
-//                {"Safari", "iOS", "14.3", "iPhone SE (2nd generation) Simulator"},
         });
     }
 
@@ -70,7 +58,6 @@ public class EmuSimWebAppTests extends MobileTestsBase {
         MutableCapabilities sauceOptions = new MutableCapabilities();
         sauceOptions.setCapability("username", EmuSimWebAppTests.SAUCE_USERNAME);
         sauceOptions.setCapability("accesskey", EmuSimWebAppTests.SAUCE_ACCESS_KEY);
-        // sauceOptions.setCapability("appiumVersion", "1.22.3");
         sauceOptions.setCapability("build", BUILD_NAME);
         sauceOptions.setCapability("name", testName.getMethodName());
         capabilities.setCapability("sauce:options", sauceOptions);
