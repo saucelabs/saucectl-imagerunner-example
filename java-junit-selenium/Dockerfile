@@ -1,4 +1,4 @@
-FROM maven:3.9.6-sapmachine-11
+FROM maven:3.9.6-eclipse-temurin-11
 
 ENV LANG=en_US.UTF-8
 
