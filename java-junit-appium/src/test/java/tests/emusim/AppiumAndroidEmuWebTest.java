@@ -27,7 +27,6 @@ import static tests.Config.*;
 
 
 public class AppiumAndroidEmuWebTest {
-
     private static ThreadLocal<AndroidDriver> androidDriver = new ThreadLocal<AndroidDriver>();
 
     String url = "https://www.saucedemo.com/";
@@ -95,9 +94,7 @@ public class AppiumAndroidEmuWebTest {
         driver.get(url);
         login("standard_user", "secret_sauce");
 
-        // Verification
         Assert.assertTrue(isOnProductsPage());
-
     }
 
     public void login(String user, String pass){

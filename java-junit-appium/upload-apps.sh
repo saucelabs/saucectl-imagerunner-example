@@ -11,7 +11,7 @@ check_command() {
 check_command "curl"
 
 upload_file() {
-  file="$1"
+  local file="$1"
 
   echo "Uploading $file ..."
   echo

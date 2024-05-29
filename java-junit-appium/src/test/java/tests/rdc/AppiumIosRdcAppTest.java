@@ -23,7 +23,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class AppiumIosRdcAppTest {
-
     private static ThreadLocal<IOSDriver> iosDriver = new ThreadLocal<IOSDriver>();
 
     AppiumBy.ByAccessibilityId productScreenLocator = new AppiumBy.ByAccessibilityId("products screen");
@@ -83,12 +82,10 @@ public class AppiumIosRdcAppTest {
         IOSDriver driver = getiosDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
-        // wait for the main page
         wait.until(ExpectedConditions.visibilityOfElementLocated(productScreenLocator));
 
         driver.findElement(sortButtonLocator).click();
 
-        //assertion - Verify the sort modal is displayed on screen
         assertThat(driver.findElement(sortModalLocator).isDisplayed(), is(true));
     }
 }
