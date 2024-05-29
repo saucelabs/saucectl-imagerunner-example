@@ -1,0 +1,11 @@
+apiVersion: v1alpha
+kind: imagerunner
+
+sauce:
+  region: us-west-1
+
+suites:
+  - name: java-junit-appium
+    image: saucelabs/imagerunner-java-junit-appium:latest
+    resourceProfile: c3m3
+    workload: webdriver
