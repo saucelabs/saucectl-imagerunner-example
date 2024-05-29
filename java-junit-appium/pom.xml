@@ -10,7 +10,7 @@
 
     <properties>
         <testngXmlDir>src/test/resources/config</testngXmlDir>
-        <testngXmlFile>appium_ios_rdc_app_test.xml</testngXmlFile>
+        <testngXmlFile>appium_all_tests.xml</testngXmlFile>
         <testng.version>7.7.1</testng.version>
         <appium.version>8.6.0</appium.version>
     </properties>

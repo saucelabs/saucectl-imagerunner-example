@@ -2,8 +2,14 @@
 <suite name="iOS Native Demo Suite" parallel="methods"
 	   thread-count="100" verbose="0">
 
-	<test name="Simple execution tests ios" enabled="true">
+	<test name="Simple execution tests Emulator Android" enabled="true">
 
+		<classes>
+			<class name="tests.emusim.AppiumAndroidEmuWebTest"/>
+		</classes>
+	</test>
+
+	<test name="Simple execution tests ios" enabled="true">
 		<classes>
 			<class name="tests.rdc.AppiumIosRdcAppTest"/>
 		</classes>

@@ -1,4 +1,4 @@
-package tests.EmuSim;
+package tests.emusim;
 
 
 import io.appium.java_client.android.AndroidDriver;
@@ -43,27 +43,9 @@ public class AppiumAndroidEmuWebTest {
 
         System.out.println("Sauce Android Web - BeforeMethod hook");
 
-        URL url;
+        URL url =  new URL(SAUCE_ONDEMAND_URL);
         MutableCapabilities capabilities = new MutableCapabilities();
         MutableCapabilities sauceOptions = new MutableCapabilities();
-
-        switch (region) {
-            case "us":
-                System.out.println("region is us");
-                url = new URL(SAUCE_US_URL);
-                break;
-            case "eu":
-            default:
-                System.out.println("region is eu");
-                url = new URL(SAUCE_EU_URL);
-                break;
-        }
-
-        // For all capabilities please check
-        // http://appium.io/docs/en/writing-running-appium/caps/#general-capabilities
-        // https://docs.saucelabs.com/dev/test-configuration-options/#mobile-appium-capabilities
-        // Use the platform configuration https://saucelabs.com/platform/platform-configurator#/
-        // to find the simulators/real device names, OS versions and appium versions you can use for your testings
 
         capabilities.setCapability("platformName", MobilePlatform.ANDROID);
         capabilities.setCapability("appium:automationName", AutomationName.ANDROID_UIAUTOMATOR2);

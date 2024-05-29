@@ -1,4 +1,4 @@
-package tests.RDC;
+package tests.rdc;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.ios.IOSDriver;
@@ -9,7 +9,6 @@ import org.openqa.selenium.*;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -36,27 +35,11 @@ public class AppiumIosRdcAppTest {
         String appName = "iOS-Real-Device-MyRNDemoApp.ipa";
 
         System.out.println("Sauce iOS Native - BeforeMethod hook");
-        URL url;
 
-        switch (region) {
-            case "us":
-                System.out.println("region is us");
-                url = new URL(SAUCE_US_URL);
-                break;
-            case "eu":
-            default:
-                System.out.println("region is eu");
-                url = new URL(SAUCE_EU_URL);
-                break;
-        }
-
+        URL url = new URL(SAUCE_ONDEMAND_URL);
         MutableCapabilities capabilities = new MutableCapabilities();
         MutableCapabilities sauceOptions = new MutableCapabilities();
-        // For all capabilities please check
-        // http://appium.io/docs/en/writing-running-appium/caps/#general-capabilities
-        // https://docs.saucelabs.com/dev/test-configuration-options/#mobile-appium-capabilities
-        // Use the platform configuration https://saucelabs.com/platform/platform-configurator#/
-        // to find the simulators/real device names, OS versions and appium versions you can use for your testings
+
         capabilities.setCapability("platformName", MobilePlatform.IOS);
         capabilities.setCapability("appium:automationName", AutomationName.IOS_XCUI_TEST);
         capabilities.setCapability("appium:deviceName", "iPhone.*");
@@ -108,7 +91,4 @@ public class AppiumIosRdcAppTest {
         //assertion - Verify the sort modal is displayed on screen
         assertThat(driver.findElement(sortModalLocator).isDisplayed(), is(true));
     }
-
-
-
 }

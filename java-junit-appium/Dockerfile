@@ -8,5 +8,8 @@ COPY apps/ ./apps
 COPY src ./src
 COPY pom.xml .
 COPY upload-apps.sh .
+COPY run-tests.sh .
 
 RUN mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
+
+CMD ["./run-tests.sh"]
