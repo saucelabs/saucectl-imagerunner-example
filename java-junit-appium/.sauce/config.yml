@@ -2,16 +2,10 @@ apiVersion: v1alpha
 kind: imagerunner
 
 sauce:
-  region: ${SAUCE_REGION}
+  region: us-west-1
 
 suites:
-  - name: photon-java
-    image: saucelabs/imagerunner-java-junit-selenium:latest
+  - name: java-junit-appium
+    image: saucelabs/imagerunner-java-junit-appium:latest
     resourceProfile: c3m3
     workload: webdriver
-    entrypoint: mvn -pl best-practice test -Dtest=DesktopTests
-    env:
-      SAUCE_USERNAME: ${SAUCE_USERNAME}
-      SAUCE_ACCESS_KEY: ${SAUCE_ACCESS_KEY}
-      SAUCE_REGION: ${SAUCE_REGION}
-      SAUCE_BUILD_TYPE: Orchestrate
