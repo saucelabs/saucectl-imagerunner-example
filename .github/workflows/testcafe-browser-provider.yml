@@ -56,4 +56,4 @@ jobs:
           env: |
             SAUCE_USERNAME=$SAUCE_USERNAME
             SAUCE_ACCESS_KEY=$SAUCE_ACCESS_KEY
-            SAUCE_API_HOST=eu-central-1.saucelabs.com
+            SAUCE_CONNECT_VERSION=4.9.2
