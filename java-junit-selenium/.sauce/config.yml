@@ -5,7 +5,10 @@ sauce:
   region: ${SAUCE_REGION}
 
 suites:
-  - name: photon-java
-    image: saucelabs/imagerunner-java-junit-appium:latest
+  - name: java-junit-selenium
+    image: saucelabs/imagerunner-java-junit-selenium:latest
     resourceProfile: c3m3
     workload: webdriver
+    entrypoint: mvn -pl best-practice test -Dtest=DesktopTests
+    env:
+      SAUCE_BUILD_TYPE: Orchestrate
