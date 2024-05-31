@@ -18,7 +18,7 @@ upload_file() {
 
   curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" \
   --location \
-  --request POST "$SAUCE_API_URL/v1/storage/upload" \
+  --request POST "$SAUCE_REST_ENDPOINT/v1/storage/upload" \
   --form "payload=@\"$file\""
 }
 
