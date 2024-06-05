@@ -1,7 +1,9 @@
 apiVersion: v1alpha
 kind: imagerunner
+
 sauce:
   region: us-west-1
+
 suites:
   - name: TestCafe with Sauce Labs Browser Provider in Image Runner 
     workload: other

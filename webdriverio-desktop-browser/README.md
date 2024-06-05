@@ -13,7 +13,6 @@ npm install -g saucectl
 ```shell
 export SAUCE_USERNAME="***"
 export SAUCE_ACCESS_KEY="***"
-export SAUCE_REGION="us-west-1"
 ```
 
 Don't know where to get username and access key? See: [user settings](https://app.saucelabs.com/user-settings).

@@ -2,7 +2,7 @@ apiVersion: v1alpha
 kind: imagerunner
 
 sauce:
-  region: ${SAUCE_REGION}
+  region: us-west-1
 
 suites:
   - name: webdriverio-desktop-browser
