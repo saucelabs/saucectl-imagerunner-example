@@ -53,7 +53,3 @@ jobs:
         with:
           working-directory: "./java-testng-selenium/"
           region: us-west-1
-          env: |
-            SAUCE_USERNAME=$SAUCE_USERNAME
-            SAUCE_ACCESS_KEY=$SAUCE_ACCESS_KEY
-            SAUCE_REGION=us-west-1

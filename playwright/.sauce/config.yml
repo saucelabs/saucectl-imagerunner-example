@@ -1,6 +1,9 @@
 kind: imagerunner
 apiVersion: v1alpha
 
+sauce:
+  region: us-west-1
+
 suites:
   - name: "Playwright in ImageRunner"
     workload: other
@@ -8,9 +11,6 @@ suites:
     timeout: 10m
     artifacts:
       - "/app/artifacts/test-results"
-    env:
-      SAUCE_USERNAME: $SAUCE_USERNAME
-      SAUCE_ACCESS_KEY: $SAUCE_ACCESS_KEY
 
 artifacts:
   cleanup: false
