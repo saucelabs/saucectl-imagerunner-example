@@ -10,5 +10,3 @@ suites:
     resourceProfile: c3m3
     workload: webdriver
     entrypoint: mvn -pl best-practice test -Dtest=DesktopTests
-    env:
-      SAUCE_BUILD_TYPE: Orchestrate
