@@ -13,9 +13,6 @@ suites:
     artifacts:
       - "/app/artifacts/screenshots"
     env:
-      SAUCE_USERNAME: ${SAUCE_USERNAME}
-      SAUCE_ACCESS_KEY: ${SAUCE_ACCESS_KEY}
-      SAUCE_REGION: ${SAUCE_REGION}
       SAUCE_BUILD_TYPE: Orchestrate
 
 artifacts:

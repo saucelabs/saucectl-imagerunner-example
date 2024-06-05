@@ -7,6 +7,3 @@ suites:
     workload: other
     image: saucelabs/imagerunner-testcafe-browser-provider-example:latest
     entrypoint: npx testcafe "saucelabs:chrome@121:Windows 11" "/app/tests/**/*.test.js"
-    env:
-      SAUCE_USERNAME: $SAUCE_USERNAME
-      SAUCE_ACCESS_KEY: $SAUCE_ACCESS_KEY

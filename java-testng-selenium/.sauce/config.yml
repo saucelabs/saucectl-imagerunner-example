@@ -10,7 +10,3 @@ suites:
     resourceProfile: c3m3
     workload: webdriver
     entrypoint: mvn test -Dtest=com.saucedemo.CrossBrowserPlatformTest
-    env:
-      SAUCE_USERNAME: ${SAUCE_USERNAME}
-      SAUCE_ACCESS_KEY: ${SAUCE_ACCESS_KEY}
-      SAUCE_REGION: ${SAUCE_REGION}
