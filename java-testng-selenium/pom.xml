@@ -11,7 +11,7 @@
 
     <properties>
         <sauce_testng.version>1.0.0</sauce_testng.version>
-        <maven.surefire.version>3.0.0-M5</maven.surefire.version>
+        <maven.surefire.version>3.2.5</maven.surefire.version>
     </properties>
 
     <dependencies>
