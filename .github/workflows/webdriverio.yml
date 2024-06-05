@@ -59,7 +59,7 @@ jobs:
           tags: saucelabs/imagerunner-webdriverio-example:latest
 
   run-wdio-sauce:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: [build-wdio]
     steps:
       - name: Checkout
