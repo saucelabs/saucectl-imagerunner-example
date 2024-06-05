@@ -2,7 +2,7 @@ apiVersion: v1alpha
 kind: imagerunner
 
 sauce:
-  region: ${SAUCE_REGION}
+  region: us-west-1
 
 suites:
   - name: webdriverio-desktop-browser
@@ -12,11 +12,6 @@ suites:
     entrypoint: npm run test.saucelabs.v2
     artifacts:
       - "/app/artifacts/screenshots"
-    env:
-      SAUCE_USERNAME: ${SAUCE_USERNAME}
-      SAUCE_ACCESS_KEY: ${SAUCE_ACCESS_KEY}
-      SAUCE_REGION: ${SAUCE_REGION}
-      SAUCE_BUILD_TYPE: Orchestrate
 
 artifacts:
   cleanup: false

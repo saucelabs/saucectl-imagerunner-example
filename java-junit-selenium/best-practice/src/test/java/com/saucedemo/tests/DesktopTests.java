@@ -38,8 +38,7 @@ public class DesktopTests extends SauceBaseTest {
     public String browserVersion;
     @Parameterized.Parameter(2)
     public SaucePlatform platform;
-    protected static final String BUILD_NAME = "Java Best Practice Demo" + " " + System.getenv().getOrDefault("SAUCE_BUILD_TYPE", "Local") + " Build #" + System.getenv().getOrDefault("SAUCE_RUN_NUMBER", String.valueOf(System.currentTimeMillis()));
-
+    protected static final String BUILD_NAME = "Java Best Practice Demo " + System.currentTimeMillis();
 
     @Parameterized.Parameters()
     public static Collection<Object[]> crossBrowserData() {

@@ -1,7 +1,9 @@
 apiVersion: v1alpha
 kind: imagerunner
+
 sauce:
   region: us-west-1
+
 suites:
   - name: TestCafe in Image Runner 
     workload: other

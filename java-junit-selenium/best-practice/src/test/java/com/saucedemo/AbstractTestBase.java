@@ -25,7 +25,7 @@ public abstract class AbstractTestBase {
 
     protected static final String SAUCE_USERNAME = System.getenv("SAUCE_USERNAME");
     protected static final String SAUCE_ACCESS_KEY = System.getenv("SAUCE_ACCESS_KEY");
-    protected static final String BUILD_NAME = "Java Best Practice Demo" + " " + System.getenv().getOrDefault("SAUCE_BUILD_TYPE", "Local Build") + " " + System.currentTimeMillis();
+    protected static final String BUILD_NAME = "Java Best Practice Demo " + System.currentTimeMillis();
 
     protected RemoteWebDriver driver;
 

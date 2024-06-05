@@ -53,6 +53,3 @@ jobs:
         with:
           working-directory: "./testcafe/basic/"
           region: us-west-1
-          env: |
-            SAUCE_USERNAME=$SAUCE_USERNAME
-            SAUCE_ACCESS_KEY=$SAUCE_ACCESS_KEY
