@@ -16,10 +16,13 @@ upload_file() {
   echo "Uploading $file ..."
   echo
 
-  curl -u "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" \
-  --location \
-  --request POST "$SAUCE_REST_ENDPOINT/v1/storage/upload" \
-  --form "payload=@\"$file\""
+  curl --silent \
+   --output /dev/null \
+   --show-error \
+   --user "$SAUCE_USERNAME:$SAUCE_ACCESS_KEY" \
+   --location \
+   --request POST "$SAUCE_REST_ENDPOINT/v1/storage/upload" \
+   --form "payload=@\"$file\""
 }
 
 upload_all_files() {
