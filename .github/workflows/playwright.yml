@@ -63,7 +63,7 @@ jobs:
           tags: saucelabs/imagerunner-playwright-example:latest
 
   run-playwright-sauce:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: [build-playwright]
     steps:
       - name: Checkout
