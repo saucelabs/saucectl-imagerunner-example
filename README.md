@@ -13,7 +13,7 @@ We prepared few basic examples for most popular languages and frameworks:
  * [Playwright](./playwright)
  * [Selenium used by Java and JUnit](./java-junit-selenium)
  * [Selenium used by Java and TestNG](./java-testng-selenium)
- * [TestCafe](./testcafe)
+ * [TestCafe](./testcafe) (plugin is not maintained by SauceLabs, might be unstable)
  * [WebDriverIO](./webdriverio-desktop-browser)
 
 ### Want to learn more?
