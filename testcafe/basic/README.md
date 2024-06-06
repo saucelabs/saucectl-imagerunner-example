@@ -2,6 +2,10 @@
 
 This example demonstrates how to run TestCafe tests with saucectl and Sauce Orchestrate.
 
+⚠️ **The provider plugin is not maintained by Sauce Labs and is currently
+experiencing a variety of issues. However, we'd love to [hear from you](devx@saucelabs.com)
+if you'd like us to provide a first party plugin instead.**
+
 ## Setup
 
 ### Install saucectl
