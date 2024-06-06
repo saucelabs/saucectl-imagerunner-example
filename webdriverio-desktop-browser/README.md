@@ -26,7 +26,8 @@ saucectl run --live-logs --region eu-central-1  # for eu-central-1 region, with 
 
 ![running example](../assets/webdriverio-example.gif)
 
-Keep in mind that this recording might not fully represent actual execution due to possible changes in our solutions.
+Disclaimer: recording above has been shortened in order to optimize your viewing experience.
+Actual output may vary depending on changes in our solutions.
 
 ## How do I customize this example?
 
