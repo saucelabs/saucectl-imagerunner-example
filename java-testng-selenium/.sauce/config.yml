@@ -5,7 +5,7 @@ sauce:
   region: us-west-1
 
 suites:
-  - name: photon-java
+  - name: java-testng-selenium
     image: saucelabs/imagerunner-java-testng-selenium:latest
     resourceProfile: c3m3
     workload: webdriver
