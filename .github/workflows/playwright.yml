@@ -1,4 +1,4 @@
-name: Plawyright ImageRunner Example
+name: Playwright ImageRunner Example
 
 on:
   pull_request:
@@ -13,7 +13,6 @@ concurrency:
 env:
   SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
   SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
-  NODE_VERSION: 20
 
 jobs:
   run-playwright-local:
@@ -25,7 +24,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version-file: ".nvmrc"
+          cache: "npm"
+          cache-dependency-path: playwright/package-lock.json
 
       - name: Install Dependencies
         run: npm install
